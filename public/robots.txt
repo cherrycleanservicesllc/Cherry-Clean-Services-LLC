@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cherrycleanservicesllc.com/sitemap.xml
+Sitemap: https://www.cherrycleanllc.com/sitemap.xml

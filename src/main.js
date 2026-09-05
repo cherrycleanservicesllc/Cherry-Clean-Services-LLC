@@ -72,7 +72,7 @@ function updateMetadata(path) {
   const [title, description] = metadata[path] || metadata['/']
   document.title = title
   document.querySelector('meta[name="description"]')?.setAttribute('content', description)
-  document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://cherrycleanservicesllc.com${path === '/' ? '/' : `${path}/`}`)
+  document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://www.cherrycleanllc.com${path === '/' ? '/' : `${path}/`}`)
 }
 
 function render() {
