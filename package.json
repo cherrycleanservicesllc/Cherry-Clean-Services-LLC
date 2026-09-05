@@ -8,9 +8,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@vitejs/plugin-basic-ssl": "latest",
     "vite": "latest"
-  },
-  "devDependencies": {}
+  }
 }
