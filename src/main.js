@@ -88,7 +88,10 @@ function bind() {
   const toggle = document.querySelector('.menu-toggle'); const close = document.querySelector('.menu-close'); const menu = document.querySelector('.mobile-menu')
   toggle?.addEventListener('click', () => menu.classList.add('open')); close?.addEventListener('click', () => menu.classList.remove('open')); menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('open')))
   document.querySelector('.form-disclaimer')?.replaceChildren(document.createTextNode('Your request is sent securely to Cherry Clean Services LLC.'))
-  document.querySelector('#quote-form')?.addEventListener('submit', async event => {
+  const quoteForm = document.querySelector('#quote-form')
+  quoteForm?.setAttribute('action', '/api/contact')
+  quoteForm?.setAttribute('method', 'post')
+  quoteForm?.addEventListener('submit', async event => {
     event.preventDefault()
     const form = event.currentTarget
     const submitButton = form.querySelector('button[type="submit"]')
