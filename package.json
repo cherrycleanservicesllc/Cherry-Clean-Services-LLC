@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {},
+  "dependencies": {
+    "resend": "^6.26.0"
+  },
   "devDependencies": {
     "@vitejs/plugin-basic-ssl": "latest",
     "vite": "latest"

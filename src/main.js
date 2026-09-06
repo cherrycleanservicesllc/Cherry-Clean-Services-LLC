@@ -87,7 +87,34 @@ function bind() {
   document.querySelectorAll('[data-link]').forEach(link => link.addEventListener('click', event => { const url = new URL(link.href); if (url.origin === window.location.origin) { event.preventDefault(); history.pushState({}, '', url.pathname + url.hash); render(); window.scrollTo({ top: 0, behavior: 'smooth' }) } }))
   const toggle = document.querySelector('.menu-toggle'); const close = document.querySelector('.menu-close'); const menu = document.querySelector('.mobile-menu')
   toggle?.addEventListener('click', () => menu.classList.add('open')); close?.addEventListener('click', () => menu.classList.remove('open')); menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('open')))
-  document.querySelector('#quote-form')?.addEventListener('submit', event => { event.preventDefault(); const data = Object.fromEntries(new FormData(event.currentTarget)); const subject = encodeURIComponent(`Quote request from ${data.name}`); const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nSpace: ${data.space}\nService: ${data.service}\n\nDetails:\n${data.message || 'None provided'}`); window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`; document.querySelector('.form-success').textContent = 'Your email app is ready. Send the message and we will be in touch.' })
+  document.querySelector('#quote-form')?.addEventListener('submit', async event => {
+    event.preventDefault()
+    const form = event.currentTarget
+    const submitButton = form.querySelector('button[type="submit"]')
+    const successMessage = form.querySelector('.form-success')
+    const data = Object.fromEntries(new FormData(form))
+    submitButton.disabled = true
+    submitButton.setAttribute('aria-busy', 'true')
+    successMessage.textContent = 'Sending your request...'
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      const result = await response.json()
+      if (!response.ok) throw new Error(result.error || 'Request failed')
+      form.reset()
+      successMessage.textContent = 'Thank you. Your request was sent and we will be in touch soon.'
+    } catch (error) {
+      console.error('Quote request failed', error)
+      successMessage.textContent = 'We could not send your request. Please call or email us directly.'
+    } finally {
+      submitButton.disabled = false
+      submitButton.removeAttribute('aria-busy')
+    }
+  })
   const params = new URLSearchParams(window.location.search); const serviceSelect = document.querySelector('[name="service"]'); if (serviceSelect && params.get('service')) { const match = services.find(service => service.id === params.get('service')); if (match) serviceSelect.value = match.title }
 }
 window.addEventListener('popstate', render)
