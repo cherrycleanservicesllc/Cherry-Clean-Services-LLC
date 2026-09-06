@@ -105,12 +105,16 @@ function bind() {
         body: JSON.stringify(data),
       })
       const result = await response.json()
-      if (!response.ok) throw new Error(result.error || 'Request failed')
+      if (!response.ok) {
+        if (result.code === 'EMAIL_CONFIG_MISSING') throw new Error('The email service is not configured in Vercel.')
+        if (result.code === 'RESEND_REJECTED') throw new Error('Resend rejected the sender address or API key.')
+        throw new Error(result.error || 'Request failed')
+      }
       form.reset()
       successMessage.textContent = 'Thank you. Your request was sent and we will be in touch soon.'
     } catch (error) {
       console.error('Quote request failed', error)
-      successMessage.textContent = 'We could not send your request. Please call or email us directly.'
+      successMessage.textContent = `${error.message} Please call or email us directly.`
     } finally {
       submitButton.disabled = false
       submitButton.removeAttribute('aria-busy')

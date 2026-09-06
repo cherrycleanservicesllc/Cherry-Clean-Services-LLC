@@ -39,7 +39,7 @@ export default async function handler(request, response) {
 
   if (!process.env.RESEND_API_KEY || !process.env.RESEND_FROM_EMAIL) {
     console.error('Missing RESEND_API_KEY or RESEND_FROM_EMAIL')
-    return response.status(500).json({ error: 'Email service is not configured' })
+    return response.status(500).json({ error: 'Email service is not configured', code: 'EMAIL_CONFIG_MISSING' })
   }
 
   const body = request.body && typeof request.body === 'object' ? request.body : {}
@@ -75,12 +75,12 @@ export default async function handler(request, response) {
 
     if (error) {
       console.error('Resend error', error)
-      return response.status(502).json({ error: 'Unable to send your request right now' })
+      return response.status(502).json({ error: 'Resend rejected the message. Verify the sender domain and Resend API key.', code: 'RESEND_REJECTED' })
     }
 
     return response.status(200).json({ success: true })
   } catch (error) {
     console.error('Contact function error', error)
-    return response.status(500).json({ error: 'Unable to send your request right now' })
+    return response.status(500).json({ error: 'Unable to send your request right now', code: 'EMAIL_SEND_FAILED' })
   }
 }
