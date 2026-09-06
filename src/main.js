@@ -87,6 +87,7 @@ function bind() {
   document.querySelectorAll('[data-link]').forEach(link => link.addEventListener('click', event => { const url = new URL(link.href); if (url.origin === window.location.origin) { event.preventDefault(); history.pushState({}, '', url.pathname + url.hash); render(); window.scrollTo({ top: 0, behavior: 'smooth' }) } }))
   const toggle = document.querySelector('.menu-toggle'); const close = document.querySelector('.menu-close'); const menu = document.querySelector('.mobile-menu')
   toggle?.addEventListener('click', () => menu.classList.add('open')); close?.addEventListener('click', () => menu.classList.remove('open')); menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('open')))
+  document.querySelector('.form-disclaimer')?.replaceChildren(document.createTextNode('Your request is sent securely to Cherry Clean Services LLC.'))
   document.querySelector('#quote-form')?.addEventListener('submit', async event => {
     event.preventDefault()
     const form = event.currentTarget
