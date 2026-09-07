@@ -92,9 +92,10 @@ body .comparison-images img { padding: 0; object-fit: cover; border-radius: 0; b
 @media (max-width: 520px) {
 	body .hero { min-height: 650px; padding-top: 48px; }
 	body .hero-copy { padding-right: 0; }
-	body .hero h1 { max-width: 58%; font-size: clamp(48px, 14vw, 70px); }
-	body .hero-intro { max-width: 66%; }
-	body .hero-visual { top: 154px; right: 7vw; width: 37vw; max-width: 170px; }
+	body .hero h1 { max-width: 48%; font-size: clamp(40px, 10vw, 54px); }
+	body .hero-intro { max-width: 78%; }
+	body .hero-visual { top: 168px; right: 2vw; width: 36vw; max-width: 150px; aspect-ratio: 1.5; }
+	body .hero-visual img { object-fit: contain; background: var(--paper-deep); }
 	body .hero-actions { max-width: 100%; }
 	body .service-row { grid-template-columns: 26px minmax(132px, 44vw) 1fr; gap: 9px; }
 	body .service-row-image { grid-row: 1 / span 2; min-height: 112px; }
