@@ -5,16 +5,16 @@ const PHONE_LINK = '+19254089359'
 const EMAIL = 'cherrycleanservicesllc@gmail.com'
 
 const services = [
-  { id: 'regular', number: '01', title: 'Regular cleaning', short: 'The steady reset that keeps your home feeling considered.', text: 'A thoughtful, reliable clean for homes that need a fresh baseline every week or two weeks.', tags: ['Weekly', 'Bi-weekly'], before: '/assets/before-after/Limpieza regular - Antes.png', after: '/assets/before-after/Limpieza regular - Despues.png' },
-  { id: 'deep', number: '02', title: 'Deep cleaning', short: 'A detail-first reset for the places routine misses.', text: 'A top-to-bottom refresh that reaches buildup, corners, surfaces, and all the small things that change a room.', tags: ['One-time', 'Detailed'], before: '/assets/before-after/Limpieza profunda - Antes.png', after: '/assets/before-after/Limpieza Profunda - Despues.png' },
-  { id: 'move', number: '03', title: 'Move in / move out', short: 'A clean handoff for the next chapter.', text: 'Move with less friction. We prepare a property to welcome someone new or leave it in its best possible condition.', tags: ['Rental ready', 'Thorough'], before: '/assets/before-after/Limpieza de entrada y salida - Antes.png', after: '/assets/before-after/Limpieza de entrada y salida - Despues.png' },
-  { id: 'recurring', number: '04', title: 'Recurring care', short: 'Weekly or bi-weekly consistency, made easy.', text: 'A repeatable rhythm with a familiar standard, tailored to how your home or property actually lives.', tags: ['Weekly', 'Bi-weekly'], before: '/assets/before-after/Limpiezas recurrentes semanales y quincenales - Antes.png', after: '/assets/before-after/Limpiezas recurrentes semanales y quincenales - Despues.png' },
-  { id: 'commercial', number: '05', title: 'Office & commercial', short: 'Professional spaces that are ready for people.', text: 'Reliable care for offices, rentals, storefronts, and commercial spaces that need to look and feel their best.', tags: ['Offices', 'Businesses'], before: '/assets/before-after/Oficinas y espacios comerciales - Antes.png', after: '/assets/before-after/Oficinas y espacios comerciales - Despues.png' },
-  { id: 'windows', number: '06', title: 'Window cleaning', short: 'More light. Less haze. A clearer point of view.', text: 'Interior and accessible exterior glass, frames, edges, and tracks finished for a clean, bright result.', tags: ['Interior', 'Exterior'], before: '/assets/before-after/Ventanas - Antes.png', after: '/assets/before-after/Ventanas - Despues.png' },
-  { id: 'power', number: '07', title: 'Power washing', short: 'The outside deserves a reset too.', text: 'A powerful clean for patios, walkways, driveways, and exterior surfaces that have lost their finish.', tags: ['Exterior', 'Restoration'], before: '/assets/before-after/Power washing - Antes.png', after: '/assets/before-after/Power washing - Despues.png' },
-  { id: 'appliances', number: '08', title: 'Appliance cleaning', short: 'The details you feel every day.', text: 'Interior and exterior appliance care for kitchens that need a little more than a surface wipe.', tags: ['Kitchen', 'Detail'], before: '/assets/before-after/Electrodomesticos - Antes.png', after: '/assets/before-after/Electrodomesticos - Despues.png' },
-  { id: 'blinds', number: '09', title: 'Blind cleaning', short: 'A softer kind of deep clean.', text: 'Careful cleaning for blinds and shades, removing dust and buildup without rushing the finish.', tags: ['Home', 'Detail'], before: '/assets/before-after/Persianas - Antes.png', after: '/assets/before-after/Persianas - Despues.png' },
-  { id: 'outdoor', number: '10', title: 'Garages & patios', short: 'Make room for the life around your home.', text: 'A practical reset for garages, patios, and the utility spaces that deserve to be usable again.', tags: ['Garage', 'Patio'], before: '/assets/before-after/Garajes y patios - Antes.png', after: '/assets/before-after/Garajes y patios - Despues.png' },
+  { id: 'regular', number: '01', title: 'Regular cleaning', short: 'The steady reset that keeps your home feeling considered.', text: 'A thoughtful, reliable clean for homes that need a fresh baseline every week or two weeks.', tags: ['Weekly', 'Bi-weekly'], before: '/assets/before-after/limpieza-regular-antes.webp', after: '/assets/before-after/limpieza-regular-despues.webp' },
+  { id: 'deep', number: '02', title: 'Deep cleaning', short: 'A detail-first reset for the places routine misses.', text: 'A top-to-bottom refresh that reaches buildup, corners, surfaces, and all the small things that change a room.', tags: ['One-time', 'Detailed'], before: '/assets/before-after/limpieza-profunda-antes.webp', after: '/assets/before-after/limpieza-profunda-despues.webp' },
+  { id: 'move', number: '03', title: 'Move in / move out', short: 'A clean handoff for the next chapter.', text: 'Move with less friction. We prepare a property to welcome someone new or leave it in its best possible condition.', tags: ['Rental ready', 'Thorough'], before: '/assets/before-after/move-in-out-antes.webp', after: '/assets/before-after/move-in-out-despues.webp' },
+  { id: 'recurring', number: '04', title: 'Recurring care', short: 'Weekly or bi-weekly consistency, made easy.', text: 'A repeatable rhythm with a familiar standard, tailored to how your home or property actually lives.', tags: ['Weekly', 'Bi-weekly'], before: '/assets/before-after/limpiezas-recurrentes-antes.webp', after: '/assets/before-after/limpiezas-recurrentes-despues.webp' },
+  { id: 'commercial', number: '05', title: 'Office & commercial', short: 'Professional spaces that are ready for people.', text: 'Reliable care for offices, rentals, storefronts, and commercial spaces that need to look and feel their best.', tags: ['Offices', 'Businesses'], before: '/assets/before-after/oficinas-comerciales-antes.webp', after: '/assets/before-after/oficinas-comerciales-despues.webp' },
+  { id: 'windows', number: '06', title: 'Window cleaning', short: 'More light. Less haze. A clearer point of view.', text: 'Interior and accessible exterior glass, frames, edges, and tracks finished for a clean, bright result.', tags: ['Interior', 'Exterior'], before: '/assets/before-after/ventanas-antes.webp', after: '/assets/before-after/ventanas-despues.webp' },
+  { id: 'power', number: '07', title: 'Power washing', short: 'The outside deserves a reset too.', text: 'A powerful clean for patios, walkways, driveways, and exterior surfaces that have lost their finish.', tags: ['Exterior', 'Restoration'], before: '/assets/before-after/power-washing-antes.webp', after: '/assets/before-after/power-washing-despues.webp' },
+  { id: 'appliances', number: '08', title: 'Appliance cleaning', short: 'The details you feel every day.', text: 'Interior and exterior appliance care for kitchens that need a little more than a surface wipe.', tags: ['Kitchen', 'Detail'], before: '/assets/before-after/electrodomesticos-antes.webp', after: '/assets/before-after/electrodomesticos-despues.webp' },
+  { id: 'blinds', number: '09', title: 'Blind cleaning', short: 'A softer kind of deep clean.', text: 'Careful cleaning for blinds and shades, removing dust and buildup without rushing the finish.', tags: ['Home', 'Detail'], before: '/assets/before-after/persianas-antes.webp', after: '/assets/before-after/persianas-despues.webp' },
+  { id: 'outdoor', number: '10', title: 'Garages & patios', short: 'Make room for the life around your home.', text: 'A practical reset for garages, patios, and the utility spaces that deserve to be usable again.', tags: ['Garage', 'Patio'], before: '/assets/before-after/garajes-patios-antes.webp', after: '/assets/before-after/garajes-patios-despues.webp' },
 ]
 
 const nav = [
@@ -78,13 +78,21 @@ function updateMetadata(path) {
 function render() {
   const path = window.location.pathname.replace(/\/$/, '') || '/'
   let content = path === '/' ? home() : path === '/services' ? servicesPage() : path === '/about' ? aboutPage() : path === '/contact-us' ? contactPage() : path === '/privacy' ? legalPage() : `<section class="not-found page-hero"><h1>That page is<br /><em>not here.</em></h1>${button('Back home', '/')}</section>`
-  document.querySelector('#app').innerHTML = `${header()}${content}${footer()}`
+  const rendered = `${header()}${content}${footer()}`
+    .replaceAll('/assets/cherry-clean-logo.jpeg', '/assets/logo.webp')
+    .replaceAll('/assets/hero-cleaning.png', '/assets/hero-cleaning.webp')
+  document.querySelector('#app').innerHTML = rendered
+  document.querySelectorAll('#app img').forEach(image => {
+    image.loading = 'eager'
+    image.decoding = 'async'
+  })
   updateMetadata(path)
   bind()
 }
 
 function bind() {
-  document.querySelector('.hero-visual img')?.setAttribute('src', '/assets/hero-cleaning.png')
+  document.querySelectorAll('.brand img').forEach(image => image.setAttribute('src', '/assets/logo.webp'))
+  document.querySelector('.hero-visual img')?.setAttribute('src', '/assets/hero-cleaning.webp')
   document.querySelectorAll('[data-link]').forEach(link => link.addEventListener('click', event => { const url = new URL(link.href); if (url.origin === window.location.origin) { event.preventDefault(); history.pushState({}, '', url.pathname + url.hash); render(); window.scrollTo({ top: 0, behavior: 'smooth' }) } }))
   const toggle = document.querySelector('.menu-toggle'); const close = document.querySelector('.menu-close'); const menu = document.querySelector('.mobile-menu')
   toggle?.addEventListener('click', () => menu.classList.add('open')); close?.addEventListener('click', () => menu.classList.remove('open')); menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('open')))
