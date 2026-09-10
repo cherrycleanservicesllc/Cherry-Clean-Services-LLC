@@ -78,8 +78,8 @@ body .comparison-images img { padding: 0; object-fit: cover; border-radius: 0; b
 .results-showcase-heading h2 { margin-bottom: 18px; }
 .results-showcase-heading p { max-width: 430px; color: var(--muted); margin-bottom: 0; }
 .results-masonry { display: grid; grid-template-columns: 1.35fr .8fr .95fr; grid-auto-rows: 190px; gap: 14px; }
-.result-tile { position: relative; min-height: 0; margin: 0; overflow: hidden; background: var(--sage); }
-.result-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.result-tile { position: relative; min-height: 0; margin: 0; overflow: hidden; background: var(--paper); }
+.result-tile img { width: 100%; height: 100%; padding: 8px; object-fit: contain; transition: transform .5s ease; }
 .result-tile:hover img { transform: scale(1.04); }
 .result-tile figcaption { position: absolute; left: 14px; bottom: 14px; max-width: calc(100% - 28px); padding: 6px 9px; background: rgba(245,240,232,.9); color: var(--ink); font-size: 10px; line-height: 1.2; }
 .result-tile-1 { grid-row: span 2; }
