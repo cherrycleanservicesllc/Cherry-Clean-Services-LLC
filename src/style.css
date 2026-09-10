@@ -119,6 +119,8 @@ body .comparison-images img { padding: 0; object-fit: cover; border-radius: 0; b
 }
 
 @media (max-width: 520px) {
+	body .yelp-button { gap: 7px; padding: 8px 10px 8px 8px; font-size: 9px; letter-spacing: .08em; box-shadow: 0 3px 0 rgba(141, 29, 41, .18); }
+	body .yelp-button .yelp-logo { width: 32px; height: 16px; }
 	body .hero { min-height: 650px; padding-top: 48px; }
 	body .hero-copy { padding-right: 0; }
 	body .hero h1 { max-width: 48%; font-size: clamp(40px, 10vw, 54px); }
