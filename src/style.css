@@ -68,8 +68,10 @@ body .comparison-images img { padding: 0; object-fit: cover; border-radius: 0; b
 .yelp-button svg { width: 15px; height: 15px; }
 .yelp-header-link, .mobile-yelp-link, .yelp-footer-link { display: inline-flex; align-items: center; gap: 8px; width: fit-content; max-width: 100%; padding: 7px 11px 7px 8px; border-radius: 999px; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; transition: background .2s, transform .2s, box-shadow .2s; white-space: nowrap; }
 .yelp-header-link .yelp-logo, .mobile-yelp-link .yelp-logo, .yelp-footer-link .yelp-logo { width: 36px; height: 18px; }
-.yelp-header-link { margin-left: 16px; }
+.yelp-header-link { width: 68px; justify-content: center; margin-left: 16px; }
 .yelp-footer-link { margin-top: 18px; }
+.yelp-button--reviews { gap: 7px; padding: 8px 10px 8px 8px; font-size: 9px; letter-spacing: .08em; box-shadow: 0 3px 0 rgba(141, 29, 41, .18); }
+.yelp-button--reviews .yelp-logo { width: 30px; height: 15px; }
 .yelp-footer-text-link { color: #d8aaa8; }
 .yelp-footer-text-link:hover { color: #fff; }
 .results-showcase { background: var(--paper-deep); }
@@ -119,8 +121,8 @@ body .comparison-images img { padding: 0; object-fit: cover; border-radius: 0; b
 }
 
 @media (max-width: 520px) {
-	body .yelp-button { gap: 7px; padding: 8px 10px 8px 8px; font-size: 9px; letter-spacing: .08em; box-shadow: 0 3px 0 rgba(141, 29, 41, .18); }
-	body .yelp-button .yelp-logo { width: 32px; height: 16px; }
+	body .yelp-button--reviews { gap: 6px; padding: 7px 9px 7px 7px; font-size: 8px; }
+	body .yelp-button--reviews .yelp-logo { width: 28px; height: 14px; }
 	body .hero { min-height: 650px; padding-top: 48px; }
 	body .hero-copy { padding-right: 0; }
 	body .hero h1 { max-width: 48%; font-size: clamp(40px, 10vw, 54px); }
