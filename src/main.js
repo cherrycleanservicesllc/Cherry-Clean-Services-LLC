@@ -33,7 +33,7 @@ function icon(name) {
   return icons[name] || ''
 }
 
-function yelpMark() { return '<img class="yelp-logo" src="/assets/yelp-mark.png" alt="" aria-hidden="true" />' }
+function yelpMark() { return '<img class="yelp-logo" src="/assets/yelp-logo-white.svg" alt="" aria-hidden="true" />' }
 function header() {
   return `<header class="site-header"><a class="brand" href="/" data-link aria-label="Cherry Clean Services LLC home"><img src="/assets/cherry-clean-logo.jpeg" alt="Cherry Clean Services LLC logo" /></a><nav class="desktop-nav">${nav.map(([label, path]) => `<a href="${path}" data-link>${label}</a>`).join('')}</nav><a class="header-cta" href="/contact-us/" data-link>Request a quote ${icon('arrow')}</a><a class="yelp-header-link" href="${YELP_URL}" target="_blank" rel="noopener noreferrer" aria-label="Visit Cherry Clean Services LLC on Yelp">${yelpMark()}<span>Yelp</span></a><button class="menu-toggle" aria-label="Open menu">${icon('menu')}</button><div class="mobile-menu"><button class="menu-close" aria-label="Close menu">${icon('close')}</button>${nav.map(([label, path]) => `<a href="${path}" data-link>${label}</a>`).join('')}<a class="mobile-quote" href="/contact-us/" data-link>Request a quote ${icon('arrow')}</a><a class="mobile-yelp-link" href="${YELP_URL}" target="_blank" rel="noopener noreferrer">${yelpMark()}<span>Find us on Yelp</span></a></div></header>`
 }
