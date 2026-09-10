@@ -61,6 +61,26 @@ body .comparison-images img { padding: 0; object-fit: cover; border-radius: 0; b
 
 .mobile-menu { display: none; }
 
+.yelp-button, .yelp-header-link, .yelp-footer-link, .mobile-yelp-link { background: #d32323; color: #fff; }
+.yelp-button:hover, .yelp-header-link:hover, .yelp-footer-link:hover, .mobile-yelp-link:hover { background: #b91c1c; color: #fff; }
+.yelp-button { margin-top: 24px; }
+.yelp-header-link, .mobile-yelp-link, .yelp-footer-link { display: inline-flex; align-items: center; width: fit-content; padding: 10px 14px; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.yelp-header-link { margin-left: 16px; }
+.yelp-footer-link { margin-top: 18px; }
+.results-showcase { background: var(--paper-deep); }
+.results-showcase-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 48px; }
+.results-showcase-heading h2 { margin-bottom: 18px; }
+.results-showcase-heading p { max-width: 430px; color: var(--muted); margin-bottom: 0; }
+.results-masonry { display: grid; grid-template-columns: 1.35fr .8fr .95fr; grid-auto-rows: 190px; gap: 14px; }
+.result-tile { position: relative; min-height: 0; margin: 0; overflow: hidden; background: var(--sage); }
+.result-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.result-tile:hover img { transform: scale(1.04); }
+.result-tile figcaption { position: absolute; left: 14px; bottom: 14px; max-width: calc(100% - 28px); padding: 6px 9px; background: rgba(245,240,232,.9); color: var(--ink); font-size: 10px; line-height: 1.2; }
+.result-tile-1 { grid-row: span 2; }
+.result-tile-2 { grid-row: span 2; }
+.result-tile-5 { grid-row: span 2; }
+.result-tile-8 { grid-column: span 2; }
+
 :root { --paper: #f5f0e8; --paper-deep: #e9e0d2; --ink: #182024; --muted: #69706c; --cherry: #b72b36; --cherry-dark: #8e1d29; --sage: #bac2ad; --line: rgba(24,32,36,.18); --serif: 'Playfair Display', Georgia, serif; --sans: 'DM Sans', Arial, sans-serif; }
 * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; } a { color: inherit; text-decoration: none; } button, input, select, textarea { font: inherit; } img { display: block; max-width: 100%; }
 .site-header { height: 94px; padding: 18px 5vw; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 10; border-bottom: 1px solid var(--line); } .brand img { width: 174px; height: 56px; object-fit: contain; mix-blend-mode: multiply; } .desktop-nav { display: flex; gap: 34px; margin-left: auto; margin-right: 38px; } .desktop-nav a { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; position: relative; } .desktop-nav a:after { content: ''; height: 1px; background: var(--cherry); position: absolute; bottom: -7px; left: 0; width: 0; transition: width .25s; } .desktop-nav a:hover:after { width: 100%; } .header-cta, .mobile-quote { background: var(--cherry); color: white; padding: 13px 18px; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; display: inline-flex; align-items: center; gap: 14px; } svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .menu-toggle, .menu-close { display: none; background: none; border: 0; cursor: pointer; }
@@ -87,6 +107,10 @@ body .comparison-images img { padding: 0; object-fit: cover; border-radius: 0; b
 	body .hero-actions { position: relative; z-index: 2; }
 	body .service-row { grid-template-columns: 32px minmax(145px, 44vw) 1fr 42px; gap: 12px; }
 	body .service-row-image { aspect-ratio: 4 / 3; min-height: 120px; }
+	body .yelp-header-link { display: none; }
+	body .results-showcase-heading { align-items: start; flex-direction: column; gap: 20px; }
+	body .results-masonry { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
+	body .result-tile-1, body .result-tile-2, body .result-tile-5, body .result-tile-8 { grid-row: span 1; grid-column: span 1; }
 }
 
 @media (max-width: 520px) {
@@ -101,4 +125,5 @@ body .comparison-images img { padding: 0; object-fit: cover; border-radius: 0; b
 	body .service-row-image { grid-row: 1 / span 2; min-height: 112px; }
 	body .service-row-copy { grid-column: 3; }
 	body .service-row .circle-arrow { grid-column: 3; grid-row: 1; }
+	body .results-masonry { grid-template-columns: 1fr; grid-auto-rows: 190px; }
 }
