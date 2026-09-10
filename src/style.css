@@ -62,11 +62,15 @@ body .comparison-images img { padding: 0; object-fit: cover; border-radius: 0; b
 .mobile-menu { display: none; }
 
 .yelp-button, .yelp-header-link, .yelp-footer-link, .mobile-yelp-link { background: #d32323; color: #fff; }
-.yelp-button:hover, .yelp-header-link:hover, .yelp-footer-link:hover, .mobile-yelp-link:hover { background: #b91c1c; color: #fff; }
-.yelp-button { margin-top: 24px; }
-.yelp-header-link, .mobile-yelp-link, .yelp-footer-link { display: inline-flex; align-items: center; width: fit-content; padding: 10px 14px; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.yelp-button:hover, .yelp-header-link:hover, .yelp-footer-link:hover, .mobile-yelp-link:hover { background: #b91c1c; color: #fff; transform: translateY(-2px); box-shadow: 0 8px 18px rgba(141, 29, 41, .18); }
+.yelp-logo { width: 20px; height: 20px; object-fit: contain; flex: 0 0 auto; }
+.yelp-button { margin-top: 24px; gap: 12px; padding: 13px 17px 13px 13px; border-radius: 999px; box-shadow: 0 5px 0 rgba(141, 29, 41, .18); transition: background .2s, transform .2s, box-shadow .2s; }
+.yelp-button svg { width: 15px; height: 15px; }
+.yelp-header-link, .mobile-yelp-link, .yelp-footer-link { display: inline-flex; align-items: center; gap: 9px; width: fit-content; padding: 8px 12px 8px 9px; border-radius: 999px; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; transition: background .2s, transform .2s, box-shadow .2s; }
 .yelp-header-link { margin-left: 16px; }
 .yelp-footer-link { margin-top: 18px; }
+.yelp-footer-text-link { color: #d8aaa8; }
+.yelp-footer-text-link:hover { color: #fff; }
 .results-showcase { background: var(--paper-deep); }
 .results-showcase-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 48px; }
 .results-showcase-heading h2 { margin-bottom: 18px; }
